@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/api/python")
@@ -7,7 +7,7 @@ def hello_world():
 
 @app.route("/")
 def main():
-    return render_template("FFApage.html")
+    return render_template("home.html")
 
 
 @app.route("/", methods = ["POST"])
